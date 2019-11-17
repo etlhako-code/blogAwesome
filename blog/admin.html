@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>my blog</title>
+    <meta  name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta  author="Ephraim">
+    <link rel="stylesheet" href="scripts/css/bootstrap.min.css">
+    <link rel="stylesheet" href="scripts/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="scripts/css/custom.css">
+
+  </head>
+  <body class="max">
+  	
+  	<div class="container-fluid">
+  		<div class="pill-nav ">
+		  <a href="index.html">Home</a>
+		  <a class="active" href="Admin.html">Admin</a>
+		</div>
+	  	<!-- top section -->
+	    <div class="jumbotron text-center bg-secondary-light">
+	        <h1 class="" >Sun City</h1>
+	        <p>blog about valley of waves</p>
+	    </div>
+	</div>
+	<br>
+	<br>
+
+	<div class="container">
+		<h1 class="text-center">create a new article</h1>
+		<form action="action.php" method="Post">
+			<h4>Article Title</h4>
+			<input class="form-control" type="text" name="articleTitle" id="articleTitle"  style="width:100%">
+			<br>
+			<h4>Choose an Image</h4>
+			<!--<input type="file" name="pic" accept="image/*"> <input type="file" accept="image/*" class="custom-file-input form-control" id="customFile">-->
+			
+			<div class="custom-file">
+			    <input type="file" class="custom-file-input form-control" id="customFile" accept="image/*">
+			    <label class="custom-file-label" for="customFile">Choose file</label>
+  			</div>
+			<br>
+			<br>
+			<h4>Article Text</h4>
+			<textarea class="form-control" type="textarea" name="articleText" id="articleText" style="width:100%" rows="5"></textarea>
+			<br>
+			<br>
+			<h4>Article Category</h4>
+			<input class="form-control" type="text" name="articleCat" id="articleCat" style="width:100%">
+			<br>
+			<br>
+			
+			<input type="submit" name="submit" class="btn btn-primary">
+		</form>
+	</div>
+  
+	<br>
+	<div class="container text-center">
+	    		
+	    <h2>Todays quote</h2>
+		<p id="date"> </p>
+		<blockquote class="blockquote">
+		<p>
+	        proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+	    </p>
+		    <footer class="blockquote-footer">
+		    	by : <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href=""><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Ephraim tlhako</span></a>
+		    </footer>
+	    </blockquote>
+	</div>
+	   <script>
+	   	var x=document.getElementById('customFile');
+		// Add the following code if you want the name of the file appear on select
+		$.on("change", function() {
+		  var fileName = $(this).val().split("\\").pop();
+		  $(this).siblings("#customFile").addClass("selected").html(fileName);
+		});
+
+	</script>  
+	<script>
+		document.getElementById("date").innerHTML = Date();
+		
+		window.addEventListener("load", function(){
+  			document.getElementById("articleTitle").focus();
+		});
+
+	</script>
+    <script type="text/javascript" href="scripts/js/bootstrap.min.js"></script>
+    <script type="text/javascript" href="scripts/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" href="scripts/js/jquery.min.js"></script>
+    <script type="text/javascript" href="scripts/js/popper.min.js"></script>
+  </body>
+</html>
